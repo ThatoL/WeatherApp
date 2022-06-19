@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header() {
   return (
     <View style={styles.header}>
-        <Text style={styles.text}>Awesome Wheather!</Text>
+        <Text style={styles.text}>Awesome Weather!</Text>
     </View>
   )
 }
