@@ -4,20 +4,21 @@ import React from 'react'
 export default function Header() {
   return (
     <View style={styles.header}>
-        <Text style={styles.text}>Awesome Wheather App!</Text>
+        <Text style={styles.text}>Awesome Wheather!</Text>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   header: {
-    marginTop: 30,
+    marginTop: 40,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 25,
+    fontWeight: '600',
+    color: 'grey'
   }
     
 })
