@@ -1,18 +1,18 @@
 import { View, Text, StyleSheet, ImageBackground } from 'react-native'
 import React from 'react'
 
-export default function CardContainer() {
+export default function CardContainer(props) {
+    const {city, temp, country, img} = props
   return (
     <View style={styles.cardContainer}>
-      <Text style={styles.headerText}>Added Location</Text>
-        <ImageBackground source={require('../images/spring.jpg')}>
+        <ImageBackground source={img}>
           <View style={styles.weatherCard}>
             <View style={styles.location}>
-              <Text style={styles.city}>JohannesBurg</Text>
-              <Text style={styles.country}>Republic of South Africa</Text>
+              <Text style={styles.city}>{city}</Text>
+              <Text style={styles.country}>{country}</Text>
             </View>
             <View style={styles.tempContainer}>
-              <Text style={styles.tempText}>5 °C</Text>
+              <Text style={styles.tempText}>{temp}°C</Text>
             </View>
           </View>
         </ImageBackground>
@@ -24,17 +24,11 @@ const styles = StyleSheet.create({
     cardContainer : {
         margin: 20,
       },
-      headerText : {
-        fontSize: 15,
-        color: 'grey',
-        fontWeight: '500',
-        marginBottom: 10,
-      },
+
       weatherCard : {
         flexDirection: 'row',
-        marginTop: 10,
+        //marginTop: 10,
         height: 90,
-        //backgroundColor: 'pink',
         shadowColor: 'black',
         shadowOffset: {width: 5, height: 5},
         elevation: 7,
