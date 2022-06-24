@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 5, height: 5},
         elevation: 7,
         shadowOpacity: 0.7,
+        marginBottom: 15
       },
       icon: {
         marginRight: 15,
