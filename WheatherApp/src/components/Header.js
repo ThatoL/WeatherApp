@@ -4,7 +4,7 @@ import React from 'react'
 export default function Header() {
   return (
     <View style={styles.header}>
-        <Text style={styles.text}>Awesome Weather!</Text>
+        <Text style={styles.text}>Whats the Weather?</Text>
     </View>
   )
 }
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 25,
-    fontWeight: '600',
+    fontSize: 24,
+    fontWeight: '700',
     color: 'grey'
   }
     
