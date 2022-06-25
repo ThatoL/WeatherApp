@@ -3,6 +3,7 @@ import { StyleSheet, View , FlatList, Text} from 'react-native';
 import Header from './src/components/Header';
 import Search from './src/components/Search';
 import CardContainer from './src/components/CardContainer';
+import RecommendedLocations from './src/components/RecommendedLocations';
 
 
 
@@ -13,12 +14,12 @@ export default function App() {
       city: "Johannesburg",
       country: "South Africa",
       temp: 5,
-      image: require('./src/images/yo.jpg'),
+      image: require('./src/images/Hot.jpg'),
     },
     {
       city: "Capetown",
       country: "South Africa",
-      temp: 21,
+      temp: 11,
       image: require('./src/images/winter.jpg'),
     },
     {
@@ -31,7 +32,7 @@ export default function App() {
       city: "Miami",
       country: "United States",
       temp: 20,
-      image: require('./src/images/summer.jpg'),
+      image: require('./src/images/breezy.jpg'),
     },
 
   ]
@@ -44,22 +45,10 @@ export default function App() {
         city={"Durban"}
         country={'South Africa'}
         temp={20}
+        img={require('./src/images/autumn.jpg')}
       />
       <Text style={styles.headerText}>Recommended Locations</Text>
-      <FlatList
-        data={Data}
-        renderItem={({item}) => {
-          
-          return (
-            <CardContainer 
-              city={item.city} 
-              country={item.country}
-              temp={item.temp}
-              img={item.image}
-            />
-          )
-        }}
-      />
+      <RecommendedLocations data={Data}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -67,18 +56,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#fff',
+    backgroundColor: "white",
     // alignItems: 'center',
     // justifyContent: 'center',
   },
   headerText : {
-    fontSize: 15,
+    fontSize: 20,
     color: 'grey',
-    fontWeight: '500',
+    fontWeight: 'bold',
     marginBottom: 10,
-    marginLeft: 20
-  },
+    marginLeft: 20,
 
-  
- 
+  },
 });
